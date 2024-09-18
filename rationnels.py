@@ -1,1 +1,3 @@
+class Rationnel:
+    pass
 
