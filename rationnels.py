@@ -18,8 +18,13 @@ class Rationnel:
         return(Rationnel(self.num * r2.den - r2.num * self.den, self.den * r2.den))
 
     def __truediv__(self, r2):
-        return(Rationnel(self.num * r2.den, self.den * r2.num))
+        return (Rationnel(self.num * r2.den, self.den * r2.num))
 
+    # COMPARAISONS
+
+    def __eq__(self, r2):
+        return True if self.num == r2.num and self.den == r2.den else False
+        
     def pgcd(self):
         return self._pgcd(self.num, self.den)
 
@@ -56,3 +61,7 @@ print(f"Test addition: {rat + rat2}\n")
 print(f"Test soustraction: {rat - rat2}\n")
 
 print(f"Test division: {rat / rat2}\n")
+
+print(f"Test égal (vrai): {Rationnel(1/2) == Rationnel(2/4)}")
+
+print(f"Test égal (faux) {Rationnel(4/3) == Rationnel(7/9)}")
