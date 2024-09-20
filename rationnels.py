@@ -25,6 +25,9 @@ class Rationnel:
     def __eq__(self, r2):
         return True if self.num == r2.num and self.den == r2.den else False
         
+    def __ne__(self, r2):
+        return False if self.num == r2.num and self.den == r2.den else True
+
     def pgcd(self):
         return self._pgcd(self.num, self.den)
 
@@ -64,4 +67,8 @@ print(f"Test division: {rat / rat2}\n")
 
 print(f"Test égal (vrai): {Rationnel(1/2) == Rationnel(2/4)}")
 
-print(f"Test égal (faux) {Rationnel(4/3) == Rationnel(7/9)}")
+print(f"Test égal (faux): {Rationnel(4/3) == Rationnel(7/9)}")
+
+print(f"Test n'est pas égal (vrai): {Rationnel(6/2) != Rationnel(8/9)}")
+
+print(f"Test n'est pas égal (faux): {Rationnel(3/4) != Rationnel(6/8)}")
