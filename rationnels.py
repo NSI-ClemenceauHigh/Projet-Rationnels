@@ -19,6 +19,7 @@ class Rationnel:
 
     def __truediv__(self, r2):
         return(Rationnel(self.num * r2.den, self.den * r2.num))
+
     def pgcd(self):
         return self._pgcd(self.num, self.den)
 
@@ -26,7 +27,7 @@ class Rationnel:
         if a == 0:
             return abs(b)
         else:
-            return self._pgcd(a % b, b)
+            return self._pgcd(b % a, a)
 
     def simplifier(self):
         pgcd = self.pgcd()
