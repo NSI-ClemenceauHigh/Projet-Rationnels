@@ -222,11 +222,11 @@ class Rationnel:
 
 if __name__ == "__main__":
 
-#test normal 
+    #test normal 
     rat = Rationnel(36, 12)
     assert str(rat) == "3/1" 
 
-# test avec paramètre unique
+    # test avec paramètre unique
     rat1 = Rationnel(5)
     assert str(rat1) == "5/1"
 
@@ -248,7 +248,7 @@ if __name__ == "__main__":
     assert (Rationnel(63, 42) < Rationnel(93, 6)) == True
     assert (Rationnel(34, 2) < Rationnel(2, 45)) == False
 
-# test de la méthode moyenne
+    # test de la méthode moyenne
     rat3 = Rationnel(1, 2)
     rat4 = Rationnel(2, 3)
     rat5 = Rationnel(3, 4)
