@@ -220,36 +220,38 @@ class Rationnel:
 #Les tests sont enfermés dans des parentheses ou des appels à str() car dû à la
 #comparaioson, python les convertirait en strings ou en booléens et causerait des erreurs
 
+if __name__ == "__main__":
+
 #test normal 
-rat = Rationnel(36, 12)
-assert str(rat) == "3/1" 
+    rat = Rationnel(36, 12)
+    assert str(rat) == "3/1" 
 
 # test avec paramètre unique
-rat1 = Rationnel(5)
-assert str(rat1) == "5/1"
+    rat1 = Rationnel(5)
+    assert str(rat1) == "5/1"
 
-rat2 = Rationnel(42, 7)
-assert str(rat * rat2) == "18/1"
-assert str(rat + rat2) == "9/1"
-assert str(rat - rat2) == "-3/1"
-assert str(rat / rat2) == "1/2"
-assert (Rationnel(1, 2) == Rationnel(2, 4)) == True
-assert (Rationnel(4, 3) == Rationnel(7, 9)) == False
-assert (Rationnel(6, 2) != Rationnel(8, 9)) == True
-assert (Rationnel(3, 4) != Rationnel(6, 8)) == False
-assert (Rationnel(8, 2) >= Rationnel(3, 5)) == True
-assert (Rationnel(8, 2) >= Rationnel(9)) == False
-assert (Rationnel(3, 6) <= Rationnel(747, 5)) == True
-assert (Rationnel(63, 4) <= Rationnel(2, 27)) == False
-assert (Rationnel(409, 12) > Rationnel(93, 30)) == True
-assert (Rationnel(23/7) > Rationnel(73, 4)) == False
-assert (Rationnel(63, 42) < Rationnel(93, 6)) == True
-assert (Rationnel(34, 2) < Rationnel(2, 45)) == False
+    rat2 = Rationnel(42, 7)
+    assert str(rat * rat2) == "18/1"
+    assert str(rat + rat2) == "9/1"
+    assert str(rat - rat2) == "-3/1"
+    assert str(rat / rat2) == "1/2"
+    assert (Rationnel(1, 2) == Rationnel(2, 4)) == True
+    assert (Rationnel(4, 3) == Rationnel(7, 9)) == False
+    assert (Rationnel(6, 2) != Rationnel(8, 9)) == True
+    assert (Rationnel(3, 4) != Rationnel(6, 8)) == False
+    assert (Rationnel(8, 2) >= Rationnel(3, 5)) == True
+    assert (Rationnel(8, 2) >= Rationnel(9)) == False
+    assert (Rationnel(3, 6) <= Rationnel(747, 5)) == True
+    assert (Rationnel(63, 4) <= Rationnel(2, 27)) == False
+    assert (Rationnel(409, 12) > Rationnel(93, 30)) == True
+    assert (Rationnel(23/7) > Rationnel(73, 4)) == False
+    assert (Rationnel(63, 42) < Rationnel(93, 6)) == True
+    assert (Rationnel(34, 2) < Rationnel(2, 45)) == False
 
 # test de la méthode moyenne
-rat3 = Rationnel(1, 2)
-rat4 = Rationnel(2, 3)
-rat5 = Rationnel(3, 4)
-moy = Rationnel.moyenne([rat3, rat4, rat5])
-assert str(moy) == "23/36"
-print(f"Test moyenne: {moy}")
+    rat3 = Rationnel(1, 2)
+    rat4 = Rationnel(2, 3)
+    rat5 = Rationnel(3, 4)
+    moy = Rationnel.moyenne([rat3, rat4, rat5])
+    assert str(moy) == "23/36"
+    print(f"Test moyenne: {moy}")
