@@ -14,6 +14,8 @@ La classe `Rationnel` permet de représenter et faire des opérations sur des no
 
 - simplification des rationnels (automatique) et calcul de moyenne
 
+- peut être importé et utilisé comme un module
+
 ### Utilisation
 
 #### Création d'objets
@@ -56,3 +58,15 @@ print(rat1 > rat2) # Affiche False
 moyenne = Rationnel.moyenne([rat1, rat2])
 print(moyenne) # Affiche "7/12"
 ``` 
+#### Import
+
+> import nom_fichier_classe.py
+
+```py
+# e.g
+from rationnels import Rationnel
+rat1 = Rationnel(3, 4)
+rat2 = Rationnel(7, 3)
+print(rat1 == rat2) # Affiche False
+print(rat1 + rat2) # Affiche "37/12"
+```
