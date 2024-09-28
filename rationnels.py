@@ -220,6 +220,7 @@ class Rationnel:
 #Les tests sont enfermés dans des parentheses ou des appels à str() car dû à la
 #comparaioson, python les convertirait en strings ou en booléens et causerait des erreurs
 
+# éxecuter les tests seulement si le fichier est executé en tant que fichier principal
 if __name__ == "__main__":
 
     #test normal 
