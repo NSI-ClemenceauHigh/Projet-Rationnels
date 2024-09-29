@@ -1,6 +1,6 @@
 import os
 import ctypes
-from src.RationnelMod import RationnelMod 
+from RationnelMod import RationnelMod 
 
 
 def approx_pi(n):

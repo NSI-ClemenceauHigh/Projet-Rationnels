@@ -70,3 +70,33 @@ rat2 = Rationnel(7, 3)
 print(rat1 == rat2) # Affiche False
 print(rat1 + rat2) # Affiche "37/12"
 ```
+
+## Classe `RationnelMod`
+
+### Description
+
+La classe `RationnelMod` est la même que `Rationnel` à l'exception qu'elle utilise une librairie dynamique compilée en C pour permettre l'approximation de ${\pi}$ avec un plus grand nombre de termes et accélerer les calculs.
+
+### Utilisation
+La classe `RationnelMod` est utilisable de la même façon que la classe `Rationnel`
+
+## Fonction `approx_pi`
+
+### Description
+
+La fonction `approx_pi` permet d'approximer $\pi$ selon un nombre donné d'itérations _n_ d'après la série de __Leibniz__.
+
+#### Fonctionnalités
+
+- Approxime la valeur de $\pi$
+- Utilise la classe `RationnelMod` qui remplace `Rationnel` pour permettre des approximations avec un nombre _n_ d'itérations plus large et offre un calcul plus rapide
+
+### Utilisation
+
+#### Approximation de $\pi$
+> pi = approx_pi(n)
+```py
+# e.g.
+pi = approx_pi(1000)
+print(pi) # Affiche un rationnel sous la forme d'une longue fraction qui approxime pi
+```
