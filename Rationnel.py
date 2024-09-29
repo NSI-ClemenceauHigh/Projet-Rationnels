@@ -262,4 +262,5 @@ if __name__ == "__main__":
     rat5 = Rationnel(3, 4)
     moy = Rationnel.moyenne([rat3, rat4, rat5])
     assert str(moy) == "23/36"
-    print(f"Test moyenne: {moy}")
+    
+    print("Tests passés")
