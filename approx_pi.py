@@ -23,7 +23,10 @@ def approx_pi(n):
 """
 ATTENTION:
 
-BON A SAVOIR: comme pas de limite de récursion (en théorie) peut potentiellement causer un peu de lag/utiliser toute la RAM. testé sans soucis jusqu'a 20000.
+BON A SAVOIR: comme pas de limite de récursion (en théorie) peut potentiellement causer
+un peu de lag/utiliser toute la RAM.
+
+testé sans soucis jusqu'a 20000.
 """
 if __name__ == "__main__":
     n = 1000
