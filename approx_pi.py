@@ -2,15 +2,6 @@ import os
 import ctypes
 from src.RationnelMod import RationnelMod 
 
-# on importe la librairie dynamique selon l'OS
-if os.name == "nt": #Windows
-    libpgcd = ctypes.CDLL("./libs/pgcd.dll")
-else: #linux
-    libpgcd = ctypes.CDLL("./libs/libpgcd.so")
-
-# déclaration des types d'args et return
-libpgcd.pgcd.argtypes = [ctypes.c_int, ctypes.c_int]
-libpgcd.pgcd.restype = ctypes.c_int
 
 def approx_pi(n):
     """
