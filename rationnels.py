@@ -64,7 +64,7 @@ class Rationnel:
         ARGUMENTS
             r2 (Rationnel): Le rationnel à soustraire
         RENVOIE
-            RENVOIE: La différence des deux rationnels
+            Rationnel: La différence des deux rationnels
         """
         return(Rationnel(self.num * r2.den - r2.num * self.den, self.den * r2.den))
 
@@ -170,7 +170,11 @@ class Rationnel:
         """
         Calcule le PGCD de deux nombres
 
-        A
+        ARGUEMENTS
+            a (int): le premier nombre
+            b (int): le deuxième nombre
+        RENVOIE
+            int: PGCD des deux nombres
         """
         if a == 0:
             return abs(b)
@@ -183,6 +187,9 @@ class Rationnel:
 
     
     def simplifier(self):
+        """
+        Simplifie le nombre rationnel
+        """
         pgcd = self.pgcd()
         self.num //= pgcd # division arrondie pour avoir direct des ints
         self.den //= pgcd
